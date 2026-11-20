@@ -25,12 +25,12 @@
     # git 方式锁定 rev（官方 main 更新后旧 rev 稳定，不会像 tarball 那样内容变了报 narHash mismatch）；
     # 官方更新时 `nix flake lock --update-input qingjian` 跟进。
     qingjian = {
-      url = "git+https://ghfast.top/https://github.com/qingjian-team/qingjian?ref=main&shallow=1";
+      url = "github:qingjian-team/qingjian?ref=main&shallow=1";
       flake = false;
     };
     # 上游数据 tar.gz（data/generated 词库 + data/models 整句模型 + assets，官方约定布局）
     qingjian-data = {
-      url = "https://ghfast.top/https://github.com/qingjian-team/qingjian/releases/download/data-v10/qingjian-data.tar.gz";
+      url = "github:qingjian-team/qingjian/releases/download/data-v10/qingjian-data.tar.gz";
       flake = false;
     };
   };

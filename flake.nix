@@ -30,7 +30,7 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     };
     # 上游数据 tar.gz（data/generated 词库 + data/models 整句模型 + assets，官方约定布局）
     qingjian-data = {
-      url = "github:qingjian-team/qingjian/releases/download/data-v10/qingjian-data.tar.gz";
+      url = "https://github.com/qingjian-team/qingjian/releases/download/data-v10/qingjian-data.tar.gz";
       flake = false;
     };
   };

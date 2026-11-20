@@ -7,8 +7,8 @@
   # 镜像（境内可拉）；tag 由官方 tools/release/data.lock 控制，数据更新时由 CI
   # （.github/workflows/update-data.yml）自动同步 URL 与 narHash。
   inputs = {
-    nixpkgs.url = "git+https://mirrors.nju.edu.cn/git/nixpkgs.git?ref=nixpkgs-unstable&shallow=1";
-
+    #nixpkgs.url = "git+https://mirrors.nju.edu.cn/git/nixpkgs.git?ref=nixpkgs-unstable&shallow=1";
+nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Rust 工具链来源：上游 rust-toolchain.toml 固定 channel = "1.96.0"，构建必须
     # 与之对齐。nixpkgs 自带的 rustc 1.97.x 在 core_arch 里把
     # llvm.x86.avx512.vpdpbusd.256 声明成 (v8i32, v32i8, v32i8)，与 LLVM 21 期望的
